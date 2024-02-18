@@ -21,4 +21,9 @@ public class Post {
         this.likes = likes;
         creationDate = date;
     }
+    public Post(String text, Date date)
+    {
+        this.text = text;
+        creationDate = date;
+    }
 }
