@@ -13,9 +13,9 @@ import java.util.List;
 public class PostService {
     private List<Post> posts = new ArrayList<Post>()
     {{
-        add(new Post("Шёл медведь в лес", new Date(), 0));
-        add(new Post("Видит машина горит", new Date(), 0));
-        add(new Post("сел внутрь и сгорел", new Date(), 0));
+        add(new Post(0L, "Шёл медведь в лес", new Date()));
+        add(new Post(1L, "Видит машина горит", new Date()));
+        add(new Post(2L, "сел внутрь и сгорел", new Date()));
     }};
 
     public List<Post> listAllPosts(){
@@ -23,6 +23,6 @@ public class PostService {
     }
 
     public void create(String text) {
-        this.posts.add(new Post(text, new Date()));
+        this.posts.add(new Post((long)posts.size(), text, new Date()));
     }
 }
